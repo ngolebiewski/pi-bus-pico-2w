@@ -25,8 +25,6 @@ def parse_eta(eta_raw):
     except:
         return None
 
-LOCAL_OFFSET = -4 * 60 * 60  # UTC-4 in seconds
-
 def compute_minutes_away(eta_raw):
     try:
         date_part, time_part = eta_raw.split("T")

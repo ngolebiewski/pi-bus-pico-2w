@@ -2,7 +2,7 @@
 
 A Raspberry Pi Pico 2W with 16x2 LCD Screen NYC MTA One-stop Bus Tracker
 
-Every morning will you be going to the same bus stop? Pain to look up on your phone. This little device will update you on arrival times for your near-to-home (or work) MTA bus stop.
+Every morning will you be going to the same bus stop? Pain to look up on your phone. This little device will update you on arrival times for your near-to-home (or work) MTA bus stop. Once set up initially, all you have to do is plug it in.
 
 Note: Project uses Micro Python and Thonny as IDE
 ![bus arrival times rotating on screen](bus_screen.gif)

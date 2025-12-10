@@ -22,6 +22,13 @@ Note: Project uses Micro Python and Thonny as IDE
 ![snapshot of lcd screen soldered to pico](pi_bus_pico_image.jpg)
 
 ---
+## Planning:
+First time, be able to connect via wifi to pico to set wifi credentials and pick a bus stop.
+
+FYI: https://www.mta.info/developers to get bus GTFS (bus stop lists)
+
+
+---
 
 ## This Repo and workspace started with the 'Python Quick Setup Workspace'
 by Nick Golebiewski

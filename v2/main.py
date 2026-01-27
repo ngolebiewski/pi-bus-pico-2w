@@ -30,7 +30,8 @@ config = {}
 
 def sync_time():
     """Sync time via NTP with retries"""
-    for i in range(4):
+    ntptime.host = "time.google.com"
+    for i in range(5):
         try:
             ntptime.settime()
             print("✅ Time synced successfully")
@@ -64,6 +65,15 @@ def check_button():
                 is_long_press = True
                 print("🚀 Entering Setup Mode")
                 setup_result = run_setup()
+                
+                #resest wifi connection after setup
+                print("♻️ Reconnecting to WiFi after Setup...")
+                lcd.clear()
+                lcd.message("Reconnecting...")
+                wifi_connect()  # Force the STA interface back on
+                config = load_config() # Reload the stop IDs in case they changed
+                # End of this patch :)
+                
                 if setup_result is False:
                     lcd.clear()
                     lcd.message("Setup Cancelled\nResuming...")
@@ -97,7 +107,7 @@ def check_button():
 
             last_api_request_time = 0
             skip_next_animation = True
-            time.sleep(0.5)
+            time.sleep(0.2)
             return True
     return False
 
@@ -204,4 +214,5 @@ while True:
 
     # 2. Always display whatever is in the current 'busses' list
     display_busses(busses)
+
 
